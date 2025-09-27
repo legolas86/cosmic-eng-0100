@@ -13,7 +13,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
-dnf5 group install base-graphical container-management core fonts hardware-support mutlimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
+dnf5 group install base-graphical container-management core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -21,7 +21,7 @@ dnf5 group install base-graphical container-management core fonts hardware-suppo
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y bootc qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix code bat zoxide fzf tldr btop ripgrep
+dnf5 -y install bootc qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix code bat zoxide fzf tldr btop ripgrep
 
 #### Example for enabling a System Unit File
 
