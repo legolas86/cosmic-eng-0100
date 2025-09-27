@@ -21,30 +21,7 @@ dnf5 group install base-graphical container-management core fonts hardware-suppo
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 install -y bootc \
-                    qemu-kvm \
-                    libvirt \
-                    virt-install \
-                    virt-manager \
-                    toolbox \
-                    distrobox \
-                    flatpak \
-                    tmux \
-                    rust \
-                    cargo \
-                    rustup \
-                    golang \
-                    helix \
-                    code \
-                    bat \
-                    zoxide \
-                    fzf \
-                    tldr \
-                    fd \
-                    btop \
-                    ripgrep && \
-
-                                
+dnf5 install -y bootc qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix code bat zoxide fzf tldr btop ripgrep
 
 #### Example for enabling a System Unit File
 
