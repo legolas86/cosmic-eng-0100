@@ -13,7 +13,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
-dnf5 group install -y base-graphical #container-management core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
+dnf5 group install -y base-graphical container-management #core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
