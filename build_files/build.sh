@@ -13,7 +13,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
-#dnf5 group install base-graphical container-management core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
+dnf5 group install -y base-graphical #container-management core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop -y
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -26,5 +26,5 @@ dnf5 -y install tmux #bootc qemu-kvm libvirt virt-install virt-manager toolbox d
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-#systemctl set-default graphical.target
+systemctl set-default graphical.target
 #for drv in qemu network nodedev nwfilter secret storage interface; do systemctl start virt${drv}d{,-ro,-admin}.socket; done
