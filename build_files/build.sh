@@ -21,7 +21,7 @@ dnf5 group install base-graphical container-management core fonts hardware-suppo
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf install -y bootc \
+dnf5 install -y bootc \
                     qemu-kvm \
                     libvirt \
                     virt-install \
@@ -42,7 +42,7 @@ dnf install -y bootc \
                     tldr \
                     fd \
                     btop \
-                    ripgrep \
+                    ripgrep && \
 
                                 
 
