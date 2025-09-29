@@ -21,7 +21,7 @@ dnf5 group install -y --nobest base-graphical container-management core fonts ha
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 -y install tmux code bootc wireshark qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix bat zoxide fzf tldr btop ripgrep rust rustup cargo fish
+dnf5 -y install tmux code bootc wireshark tcpdump podman-bootc podman-machine podman-compose podman-tui virt-v2v tiptop qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix bat zoxide fzf tldr btop ripgrep rust rustup cargo fish
 dnf5 clean all
 #### Example for enabling a System Unit File
 
