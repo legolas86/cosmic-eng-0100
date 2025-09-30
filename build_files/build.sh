@@ -13,7 +13,7 @@ sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.micros
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
-dnf5 update -y
+#dnf5 update -y
 dnf5 group install -y --nobest base-graphical container-management core fonts hardware-support multimedia networkmanager-submodules printing development-tools c-development cosmic-desktop
 # Use a COPR Example:
 #
@@ -28,4 +28,4 @@ dnf5 clean all
 
 systemctl enable podman.socket
 systemctl set-default graphical.target
-#for drv in qemu network nodedev nwfilter secret storage interface; do systemctl start virt${drv}d{,-ro,-admin}.socket; done
+#for drv in qemu network nodedev nwfilter secret storage interface; do systemctl start virt${drv}d{,-ro,-admin}.socket; done    
