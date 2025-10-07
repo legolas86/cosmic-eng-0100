@@ -24,6 +24,7 @@ dnf5 group install -y --nobest base-graphical container-management core fonts ha
 
 dnf5 -y install tmux code bootc wireshark podmansh tcpdump podman-machine podman-compose podman-tui virt-v2v tiptop qemu-kvm libvirt virt-install virt-manager toolbox distrobox flatpak tmux rust cargo rustup golang helix bat zoxide fzf tldr btop ripgrep rust rustup cargo fish
 dnf5 clean all
+grep -E '^libvirt:' /usr/lib/group >> /etc/group
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
