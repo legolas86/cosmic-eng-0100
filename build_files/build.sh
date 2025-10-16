@@ -14,6 +14,11 @@ sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.micros
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
 dnf5 -y install ./protonvpn-stable-release-1.0.3-1.noarch.rpm
 
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf5 -y install terra-release-extras ghostty starship
+dnf5 config-manager setopt "terra*".enabled=0
+
+
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
 #dnf5 update -y
