@@ -12,7 +12,7 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 # Proton VPN install
 wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
-dnf5 sudo dnf install ./protonvpn-stable-release-1.0.3-1.noarch.rpm
+dnf5 install ./protonvpn-stable-release-1.0.3-1.noarch.rpm
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
