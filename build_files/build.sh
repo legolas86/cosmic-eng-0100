@@ -38,7 +38,7 @@ dnf5 clean all
 #### Example for enabling a System Unit File
 
 #libvirt group fix
-grep -E '^libvirt:' /usr/lib/group | tee -a /etc/group 
+grep '^libvirt:' /usr/lib/group | tee -a /etc/group 
 #wireshark fix
 setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
 
