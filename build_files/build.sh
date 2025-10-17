@@ -18,6 +18,8 @@ dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/te
 dnf5 -y install terra-release-extras ghostty starship
 dnf5 config-manager setopt "terra*".enabled=0
 
+  
+
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
@@ -34,6 +36,11 @@ dnf5 -y install proton-vpn-gnome-desktop tmux code bootc wireshark podmansh tcpd
 dnf5 clean all
 
 #### Example for enabling a System Unit File
+
+#libvirt group fix
+grep -E '^libvirt:' /usr/lib/group | sudo tee -a /etc/group 
+#wireshark fix
+setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
 
 systemctl enable podman.socket
 systemctl set-default graphical.target
